@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto System Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1> Login</h1>
+         
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+        </form>
+    </div>
+         
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Simulate a successful login (you can add actual authentication logic here)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            if (username === "Vishwa" && password === "pass") { // Simple check
+                localStorage.setItem('username', username); // Store username
+                window.location.href = 'index.html'; // Redirect on success
+            }
+            else if (username === "Tusharkapoor" && password === "password") { // Simple check
+                localStorage.setItem('username', username); // Store username
+                window.location.href = 'index.html'; // Redirect on success
+            } 
+            else {
+                alert('Invalid credentials'); // Handle login failure
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
